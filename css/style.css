@@ -117,8 +117,8 @@ body {
     background-color: #1C62CD;
     border-radius: 50%;
     text-align: center;
-    bottom: -14px;
-    right: -14px;
+    bottom: -5px;
+    right: -13px;
 }
 
 .header__bottom {
@@ -663,4 +663,100 @@ li.slick-active button {
 
 .banner {
     margin-bottom: 80px;
+}
+
+.footer {
+    background: #F0F0F4;
+}
+
+.footer__bottom {
+    padding: 46px 0 22px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__bottom-link {
+    font-size: 10px;
+    line-height: 12px;
+    color: #48494D;
+    margin: 0 40px;
+}
+
+.footer__top {
+    padding-top: 43px;
+}
+
+.footer__top-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__top-item.footer__top-newslatter {
+    width: 295px;
+    margin-right: 50px;
+}
+
+.footer__top-title {
+    font-family: 'SFProDisplay-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 8px;
+}
+
+.footer-form {
+    padding-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-form__input {
+    background-color: #fff;
+    border: none;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 10px 10px 10px 12px;
+    outline: none;
+}
+
+.footer-form__input::placeholder {
+    color: #C4C4C4;
+}
+
+.footer-form__btn {
+    padding: 10px 16px;
+    background: #1C62CD;
+    font-family: 'SFProDisplay-Semibold', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.footer__top-item {
+    width: 180px;
+}
+
+.footer-list {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.footer__top-item.footer__top-social {
+    width: 275px;
+}
+
+.social-list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.social-list__item+.social-list__item {
+    margin-left: 30px;
 }
