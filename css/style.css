@@ -125,6 +125,10 @@ body {
     margin-bottom: 80px;
 }
 
+.header__bottom-catalog {
+    margin-bottom: 40px;
+}
+
 .menu-categories {
     background-color: #F0F0F4;
     display: flex;
@@ -759,4 +763,32 @@ li.slick-active button {
 
 .social-list__item+.social-list__item {
     margin-left: 30px;
+}
+
+.breadcrambs {
+    margin-bottom: 40px;
+}
+
+.breadcrambs__list-item {
+    display: inline-block;
+    padding-right: 16px;
+    margin-right: 10px;
+    position: relative;
+    font-size: 15px;
+    line-height: 18px;
+    color: #C4C4C4;
+}
+
+.breadcrambs__list-item::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    background-image: url('../images/link-arrow.svg');
+    width: 6px;
+    height: 10px;
+    bottom: 4px;
+}
+
+.breadcrambs__list-item:last-child::after {
+    display: none;
 }
