@@ -461,6 +461,7 @@ li.slick-active button {
 .product-item__wrapper {
     position: relative;
     width: 271px;
+    min-height: 400px;
     margin-bottom: 35px;
 }
 
@@ -471,6 +472,11 @@ li.slick-active button {
     text-align: center;
     padding: 52px 20px 31px;
     transition: all .3s;
+    width: 271px;
+}
+
+.product-item__img {
+    max-width: 100%;
 }
 
 .product-item__title {
@@ -791,4 +797,105 @@ li.slick-active button {
 
 .breadcrambs__list-item:last-child::after {
     display: none;
+}
+
+.catalog {
+    margin-bottom: 100px;
+}
+
+.catalog__title {
+    font-family: 'SFProDisplay-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 26px;
+}
+
+.catalog__filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.catalog__filter-itembtn {
+    font-size: 14px;
+    line-height: 17px;
+    color: #2F3035;
+    opacity: 0.7;
+    padding: 7px 22px 5px;
+    background: #F0F0F4;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+}
+
+.catalog__filter-itembtn+.catalog__filter-itembtn {
+    margin-left: 8px;
+}
+
+.catalog__filter-itembtn.activ {
+    opacity: 1;
+    border-bottom: 1px solid #1C62CD;
+}
+
+.catalog__filter-btn button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+.catalog__filter-btn button+button {
+    margin-left: 10px;
+}
+
+.catalog__filter-btngrid {}
+
+.catalog__filter-btnline {}
+
+.catalog__inner {
+    display: flex;
+}
+
+.catalog__inner-aside {
+    min-width: 290px;
+    margin-right: 10px;
+}
+
+.catalog__inner-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pagination {
+    width: 100%;
+    margin-top: 70px;
+}
+
+.pagination-list {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-list__item {
+    padding: 6px 12px;
+    border: 2px solid transparent;
+    margin: 0 4px;
+    line-height: 22px;
+    font-size: 18px;
+    color: #C4C4C4;
+}
+
+.pagination-list__item.active {
+    border: 2px solid #1C62CD;
+    color: #1C62CD;
+}
+
+.pagination-list__item a {
+    display: block;
 }
