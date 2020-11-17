@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Drive moto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="css/jquery.rateyo.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -136,12 +140,11 @@
                     <button class="catalog__filter-itembtn activ">еще</button>
                 </div>
                 <div class="catalog__filter-btn">
-                    <select>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                    <select class="filter-style select-item">
+                        <option>По полулярности</option>
+                        <option>По стоимости</option>
                     </select>
-                    <button class="catalog__filter-btngrid">
+                    <button class="catalog__filter-btngrid catalog__filter-button catalog__filter-button--active">
                         <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="1" y="1" width="21" height="19" stroke="#2F3035" stroke-width="2"/>
                             <rect x="7" y="6" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2"/>
@@ -150,9 +153,9 @@
                             <rect x="14" y="13" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2"/>
                             </svg>
                     </button>
-                    <button class="catalog__filter-btnline">
+                    <button class="catalog__filter-btnline catalog__filter-button">
                         <svg width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g opacity="0.3">
+                            <g opacity="1">
                             <rect x="6" width="19" height="3" rx="1.5" fill="#2F3035"/>
                             <rect x="6" y="8" width="19" height="3" rx="1.5" fill="#2F3035"/>
                             <rect x="6" y="16" width="19" height="3" rx="1.5" fill="#2F3035"/>
@@ -168,7 +171,263 @@
 
             <div class="catalog__inner">
 
-                <div class="catalog__inner-aside">
+                <div class="catalog__inner-aside aside-filter">
+
+                    <div class="tabs-wrapper">
+
+                        <div class="tabs aside-filter__tabs">
+                            <a class="tab aside-filter__tab tab--active" href="#"><span>Параметры</span></a>
+                            <a class="tab aside-filter__tab" href="#"><span>По марке</span></a>
+                        </div>
+
+                        <div class="tabs-container aside-filter__tabs-container">
+
+                            <div class="tabs-content aside-filter__tabs-content tabs-content--active">
+                                <form class="aside-filter__form">
+
+                                    <ul class="aside-filter__list">
+
+                                        <li class="aside-filter__item-drop">
+                                            <p class="aside-filter__item-title filter__item-drop filter__item-drop--active">Наличие</p>
+                                            <div class="aside-filter__content">
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox">
+                                                        В наличии
+                                                    </label>
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox">
+                                                        Под заказ
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="aside-filter__item-drop">
+                                            <p class="aside-filter__item-title filter__item-drop filter__item-drop--active">Новинки</p>
+                                            <div class="aside-filter__content aside-filter__content-radio">
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" name="radio" type="radio">
+                                                        Все
+                                                    </label>
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" name="radio" type="radio">
+                                                        Новинки
+                                                    </label>
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" name="radio" type="radio">
+                                                        Акции
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="aside-filter__item-drop">
+                                            <p class="aside-filter__item-title filter__item-drop filter__item-drop--active">Цена</p>
+                                            <div class="aside-filter__content">
+                                                <div class="range-slider">
+                                                    <input type="text" class="js-range-slider" name="my_range" value="" data-min="0" data-max="1500000" data-from="100000" data-to="500000" />
+                                                </div>
+                                                <div class="extra-controls">
+                                                    <label class="extra-controls__from">
+                                                        от <input type="text" class="js-input-from" value="0" />
+                                                    </label>
+                                                    <label class="extra-controls__to">
+                                                        до <input type="text" class="js-input-to" value="0" />
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="aside-filter__item-list">
+                                            <div class="filter__item-list">
+                                                <p class="filter__item-listtitle">
+                                                    Мощность, л.с.
+                                                </p>
+                                                <select class="filter-style filter__item-listselect">
+                                                    <option value="">90</option>
+                                                    <option value="">130</option>
+                                                    <option value="">154</option>
+                                                    <option value="">230</option>
+                                                    <option value="">300</option>
+                                                </select>
+                                            </div>
+                                            <div class="filter__item-list">
+                                                <p class="filter__item-listtitle">
+                                                    Объем двигателя
+                                                </p>
+                                                <select class="filter-style filter__item-listselect">
+                                                    <option value="">899</option>
+                                                    <option value="">1494</option>
+                                                    <option value="">1630</option>
+                                                </select>
+                                            </div>
+                                            <div class="filter__item-list">
+                                                <p class="filter__item-listtitle">
+                                                    Макс. скорость, км/ч
+                                                </p>
+                                                <select class="filter-style filter__item-listselect">
+                                                    <option value="">90</option>
+                                                    <option value="">130</option>
+                                                    <option value="">154</option>
+                                                    <option value="">230</option>
+                                                    <option value="">300</option>
+                                                </select>
+                                            </div>
+
+                                        </li>
+
+                                        <li class="aside-filter__item-drop">
+                                            <p class="aside-filter__item-title filter__item-drop filter__item-drop--active">Бренд</p>
+                                            <div class="aside-filter__content">
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox" checked>
+                                                        BRP
+                                                    </label>
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox" checked>
+                                                        Spark 2
+                                                    </label>
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox">
+                                                        Spark 3
+                                                    </label>
+                                                </div>
+                                                <div class="filter-more">
+                                                    <button class="filter-more__btn" href="#">
+                                                        Показать еще
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="aside-filter__item-drop">
+                                            <p class="aside-filter__item-title filter__item-drop filter__item-drop--active">Модель</p>
+                                            <div class="aside-filter__content">
+                                                <input class="filter-search" type="text" placeholder="Введите модель">
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox" checked>
+                                                        Sea-doo Spark 2
+                                                    </label>
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox" checked>
+                                                        SeaDoo Spark 90 
+                                                    </label>
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox">
+                                                        SeaDoo GTI 155 
+                                                    </label>
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox">
+                                                        SeaDoo GTR 230 
+                                                    </label>
+                                                </div>
+                                                <div class="filter-more">
+                                                    <button class="filter-more__btn" href="#">
+                                                        Показать еще
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="aside-filter__item-drop btn-checked">
+                                            <p class="aside-filter__item-title filter__item-drop filter__item-drop--active">Акции</p>
+                                            <div class="aside-filter__content">
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox">
+                                                        <span class="btn-checked__text">SALE</span>
+                                                    </label>
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox">
+                                                        <span class="btn-checked__text">NEW</span>
+                                                    </label>
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox">
+                                                        <span class="btn-checked__text">HIT</span>
+                                                    </label>
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox">
+                                                        <span class="btn-checked__text">ДИЛЕР</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="aside-filter__item-drop">
+                                            <p class="aside-filter__item-title filter__item-drop filter__item-drop--active">Страны</p>
+                                            <div class="aside-filter__content">
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox" checked>
+                                                        Россия
+                                                    </label>
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox" checked>
+                                                        Германия
+                                                    </label>
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox">
+                                                        Китай
+                                                    </label>
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                        <input class="filter-style" type="checkbox">
+                                                        CША
+                                                    </label>
+                                                </div>
+                                                <div class="filter-more">
+                                                    <button class="filter-more__btn" href="#">
+                                                        Показать еще
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="aside-filter__item-drop aside-filter__item-btn">
+                                            <button class="filter-btn__send filter-btn__send--active" type="submit">ВЫБРАТЬ</button>
+                                            <p class="filter__extra">Дополнительные параметры</p>
+                                            <div class="filter__extra-content">more</div>
+                                            <button class="filter-btn__reset" type="submit">Сбросить фильтр</button>
+                                        </li>
+
+                                    </ul>
+
+                                </form>
+                            </div>
+
+                            <div class="tabs-content aside-filter__tabs-content">Content-2</div>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -573,6 +832,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/jquery.rateyo.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
